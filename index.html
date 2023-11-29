@@ -1,0 +1,86 @@
+!<DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-Lv0p5Zv3iK0omYzP9avhFgfLI7RZiz/LbFAD4nqNl+1xQ2Qaek9RgH6D0i1iJ5ZLha26aaO/JUnB+3pZaZtHg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>The Sixth Moon</title>
+    </head> 
+    <body>
+        <div id="opening-page">
+            <audio id="opening-music" src="opening1.mp3" loop autoplay></audio>
+            <div id="door-button" onclick="openDoor()"> <div class="button-text">Give a hearty knock upon the door, noble princess, and let it be known that you seek entry. </div></div>
+            <button id="play-music-button" onclick="playOpeningMusic()">Play Music</button>
+        </div>
+        <div id="heart"></div>
+        <div id="main-page" class="hidden">
+            <audio id="main-music" src="main.mp3" loop autoplay></audio>
+            <header>
+                <h1>The Sixth Moon's Passage</h1>
+                <p>Hail to the union of hearts, where love's flame burns bright! <br>May our journey together be as enduring as the mountains and as boundless as the sea.</p><br> </p>
+            </header>
+            <!-- Add this to your #description section -->
+
+    <section id="description" class="popup-container">
+        <div class="popup-content">
+            <span class="close-button" onclick="closeDescription()">×</span>
+            <p id="image-description"></p>
+        </div>  
+    </section>
+    
+    <section id="gallery">
+        <div class="image-container" onclick="showDescription('The maiden sunrise of love', 'The tender sunrise of love,<br>where our hearts entwined,</br> <br> the sweet nectar of affection, </br> and thus began a saga woven with the</br><br>threads of our shared devotion.</br>')">
+            <!-- Main Image -->
+            <img src="first.jpeg" alt="pic1" class="gallery-image">
+            <!-- Small Images -->
+            <img src="flower-topleft.png" alt="small1" class="small-image top-left">
+            <img src="flower-topright.png" alt="small2" class="small-image top-right">
+            <img src="flower-bottomleft.png" alt="small3" class="small-image bottom-left">
+            <img src="flower-bottomright.png" alt="small4" class="small-image bottom-right">
+        </div>
+        <div class="image-container" onclick="showDescription('Brighter than the moon', 'The hall of grace, <br> the moons glow twirls,</br> <br> Her gaze, a spell, in the quiet swirls.</br><br> A tapestry of whispers, </br>     <br> colors untamed, Secrets woven,</br><br> in brilliance proclaimed.</br>')">
+            <!-- Main Image -->
+            <img src="second.jpeg" alt="pic4" class="gallery-image">
+            <!-- Small Images -->
+            <img src="flower-topleft.png" alt="small13" class="small-image top-left">
+            <img src="flower-topright.png" alt="small14" class="small-image top-right">
+            <img src="flower-bottomleft.png" alt="small15" class="small-image bottom-left">
+            <img src="flower-bottomright.png" alt="small16" class="small-image bottom-right">
+        </div>
+    
+    
+        <div class="image-container" onclick="showDescription('Chronicle in Frame', 'In the frame,<br> a captured moments embrace, <br>Echoes of laughter, time cant efface. <br> Brushstrokes of memories, <br> vivid and true, <br> picture tells tales, me and you.</br>')">
+            <!-- Main Image -->
+            <img src="third.jpeg" alt="pic2" class="gallery-image">
+            <!-- Small Images -->
+            <img src="flower-topleft.png" alt="small5" class="small-image top-left">
+            <img src="flower-topright.png" alt="small6" class="small-image top-right">
+            <img src="flower-bottomleft.png"alt="small7" class="small-image bottom-left">
+            <img src="flower-bottomright.png" alt="small8" class="small-image bottom-right">
+        </div>
+    
+        <div class="image-container" onclick="showDescription('The sweet embrace of hearts entwined', 'The enchanting saga painted upon the canvas of<br>our shared existence,</br><br>\na tale of beauty carved by</br><br> the hands of destiny for us,</br><br> the inseparable kin.</br>')">
+            <!-- Main Image -->
+            <img src="fourth.jpeg" alt="pic3" class="gallery-image">
+            <!-- Small Images -->
+            <img src="flower-topleft.png" alt="small9" class="small-image top-left">
+            <img src="flower-topright.png" alt="small10" class="small-image top-right">
+            <img src="flower-bottomleft.png" alt="small11" class="small-image bottom-left">
+            <img src="flower-bottomright.png" alt="small12" class="small-image bottom-right">
+        </div>
+    
+      
+        <!-- Add more image containers as needed -->
+    </section>
+    
+    
+            <section id="description">
+                <p id="image-description"></p>
+            </section>
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>

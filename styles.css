@@ -1,0 +1,326 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("hall.jpg"); /* Updated to Misty Pink (#d5b195) */;
+  color: #333;
+  background-size: cover;
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+.scrollable {
+  overflow: auto;
+}
+#opening-page {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+
+}
+#opening-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: fixed;
+}
+
+
+#opening-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  background-color: rgba(113, 68, 35, 0.5); /* Adjust color and opacity as needed */
+}
+
+#door-button {
+  font-size: 24px;
+  padding: 15px 30px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Added transition property */
+  position: relative;
+  width: 715px; /* Set width to 500px */
+  top: -2%;
+    height: 715px; /* Set height to 500px */
+  background-image: url('door.png'); /* Add the path to your medieval door image */
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  overflow: hidden !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.button-text {
+  background-color: rgba(47, 27, 18, 0.7); /* Adjust the color and opacity */
+  padding: 10px; /* Add padding to the text container */
+  border-radius: 6px; /* Adjust the border-radius */
+  top: 100px;
+}
+#door-button:hover {
+  background-color: rgba(151, 112, 79, 0.3); /* Deep Pink */
+  
+}
+
+#main-page {
+  display: none;
+}
+.lower-opacity {
+  opacity: 0.5; /* Adjust the opacity as needed */
+}
+
+header {
+    background-color: #2f1b12; /* Light Pink */
+  text-align: center;
+  opacity: 90%;
+  margin-top: -20px;
+bottom: 20%;
+height: 100px;
+  padding: 40px; /* Increased padding */
+  border-bottom: 2px solid #e0e0e0;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1); /* Drop shadow */
+}
+
+header h1 {
+    font-size: 48px; /* Increased font size */
+  margin: 0;
+  font-weight: bold; /* Added font weight */
+  color: whitesmoke; /* Deep Pink */
+}
+
+header p {
+    font-size: 18px; /* Increased font size */
+    margin: 10px 0; /* Adjusted margin */
+    color: whitesmoke; /* Hot Pink */
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px; /* Set initial grid gap */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center the grid */
+    padding: 20px; /* Adjusted overall padding */
+}
+.image-container {
+    position: relative;
+  }
+  
+  .image-description {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 200px;
+  }
+  
+  .image-description.show {
+    display: block;
+  }
+
+  .small-image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    z-index: 1; /* Move small images to the back */
+}
+
+/* Add a higher z-index to the .image-container to make sure it's above the small images */
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2; /* Set a higher z-index for the image container */
+}
+
+.top-left {
+    top: -20px; /* Adjust the top position */
+    left: -5px; /* Adjust the left position */
+    height: 150px;
+}
+
+.top-right {
+    top: -5px; /* Adjust the top position */
+    right: -35px; /* Adjust the right position */
+    width: 120;
+}
+
+.bottom-left {
+    bottom: -40px; /* Adjust the bottom position */
+    left: -30px; /* Adjust the left position */
+    height: 150px;
+    width: 150px;
+}
+
+.bottom-right {
+    bottom: -35px; /* Adjust the bottom position */
+    right: -35px; /* Adjust the right position */
+    height: 150px;
+    width: 150px;
+}
+
+#play-music-button {
+  position: fixed;
+  top: 50%;
+  right: calc(-5% + 160px); /* Adjust the position as needed */
+  transform: translateY(-50%);
+  font-size: 16px; /* Adjust the font size as needed */
+  background-color: #2f1b12; /* Same color as the header */
+  color: #fff;
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  right: 8%;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 2;
+  transition: opacity 0.3s ease-in-out;
+}
+#play-music-button.clicked {
+  background-color: transparent;
+}
+/* Adjust margin for top-left and bottom-left image containers */
+.image-container:nth-child(1), .image-container:nth-child(3) {
+    margin-left: 230px;
+}
+.flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white; /* Set flash color */
+  opacity: 0; /* Initial opacity set to 0 */
+  pointer-events: none; /* Allow interactions with elements underneath */
+  z-index: 4;
+}
+
+.flash-animation {
+  animation: flashAnimation 3s linear forwards;
+}
+@keyframes flashAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animation {
+  animation: flashAnimation 5s ease-out forwards;
+}
+
+
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover .gallery-image {
+    transform: scale(1.05)!important;
+}
+
+#description {
+    text-align: center;
+    padding: 20px;
+}
+
+#image-description {
+    font-size: 18px;
+}
+
+body {
+    background-color: #fce4ec;
+
+  }
+
+  @keyframes flow-hearts {
+    0% {
+      transform: translate(-50%, -50%) scale(0.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(80vh) scale(0.2);
+      opacity: 0.1;
+    }
+  }
+
+  .popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    right: -5%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    right: 2%;
+    text-align: center;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    animation: flow-hearts 5s linear infinite;
+    background-image: url(leaves.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+  }
+
